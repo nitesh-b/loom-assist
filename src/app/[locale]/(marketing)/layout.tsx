@@ -1,8 +1,7 @@
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { DemoBanner } from '@/components/DemoBanner';
-import { LocaleSwitcher } from '@/components/LocaleSwitcher';
-import { Link } from '@/libs/I18nNavigation';
-import { BaseTemplate } from '@/templates/BaseTemplate';
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { LocaleSwitcher } from "@/components/LocaleSwitcher";
+import { Link } from "@/libs/I18nNavigation";
+import { BaseTemplate } from "@/templates/BaseTemplate";
 
 export default async function Layout(props: {
   children: React.ReactNode;
@@ -12,67 +11,67 @@ export default async function Layout(props: {
   setRequestLocale(locale);
   const t = await getTranslations({
     locale,
-    namespace: 'RootLayout',
+    namespace: "RootLayout",
   });
 
   return (
     <>
-      <DemoBanner />
       <BaseTemplate
+        sticky
         leftNav={
           <>
             <li>
               <Link
                 href="/"
                 className="nav-link loom-chip border-none px-4 py-2 font-semibold transition-all duration-200"
-                style={{ color: 'var(--loom-text)' }}
+                style={{ color: "var(--loom-text)" }}
               >
-                {t('home_link')}
+                {t("home_link")}
               </Link>
             </li>
             <li>
               <Link
                 href="/features/"
                 className="nav-link loom-chip border-none px-4 py-2 font-semibold transition-all duration-200"
-                style={{ color: 'var(--loom-text)' }}
+                style={{ color: "var(--loom-text)" }}
               >
-                {t('features_link')}
+                {t("features_link")}
               </Link>
             </li>
             <li>
               <Link
                 href="/pricing/"
                 className="nav-link loom-chip border-none px-4 py-2 font-semibold transition-all duration-200"
-                style={{ color: 'var(--loom-text)' }}
+                style={{ color: "var(--loom-text)" }}
               >
-                {t('pricing_link')}
+                {t("pricing_link")}
               </Link>
             </li>
             <li>
               <Link
                 href="/therapists/"
                 className="nav-link loom-chip border-none px-4 py-2 font-semibold transition-all duration-200"
-                style={{ color: 'var(--loom-text)' }}
+                style={{ color: "var(--loom-text)" }}
               >
-                {t('therapists_link')}
+                {t("therapists_link")}
               </Link>
             </li>
             <li>
               <Link
                 href="/resources/"
                 className="nav-link loom-chip border-none px-4 py-2 font-semibold transition-all duration-200"
-                style={{ color: 'var(--loom-text)' }}
+                style={{ color: "var(--loom-text)" }}
               >
-                {t('resources_link')}
+                {t("resources_link")}
               </Link>
             </li>
             <li>
               <Link
                 href="/contact/"
                 className="nav-link loom-chip border-none px-4 py-2 font-semibold transition-all duration-200"
-                style={{ color: 'var(--loom-text)' }}
+                style={{ color: "var(--loom-text)" }}
               >
-                {t('contact_link')}
+                {t("contact_link")}
               </Link>
             </li>
           </>
@@ -83,9 +82,9 @@ export default async function Layout(props: {
               <Link
                 href="/sign-in/"
                 className="nav-link loom-chip border-none px-4 py-2 font-semibold transition-all duration-200"
-                style={{ color: 'var(--loom-text-muted)' }}
+                style={{ color: "var(--loom-text-muted)" }}
               >
-                {t('sign_in_link')}
+                {t("sign_in_link")}
               </Link>
             </li>
 
@@ -94,7 +93,7 @@ export default async function Layout(props: {
                 href="/sign-up/"
                 className="nav-link loom-chip border-none bg-[var(--loom-accent)] px-4 py-2 font-semibold text-white transition-all duration-200"
               >
-                {t('sign_up_link')}
+                {t("sign_up_link")}
               </Link>
             </li>
 

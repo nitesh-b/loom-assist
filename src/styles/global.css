@@ -28,7 +28,7 @@
   .loom-card {
     border: 1px solid var(--loom-outline);
     background: var(--loom-surface);
-    border-radius: 16px;
+    border-radius: 0px;
   }
 
   .loom-chip {
@@ -77,7 +77,7 @@
   }
 
   .nav-link:hover {
-    transform: scale(1.08);
+    transform: scale(1.1);
     background-color: var(--loom-accent-soft);
     color: var(--loom-accent) !important;
   }
