@@ -1,0 +1,84 @@
+@layer theme, base, clerk, components, utilities; /* Ensure Clerk is compatible with Tailwind CSS v4 */
+
+@import 'tailwindcss';
+
+@layer base {
+  :root {
+    --loom-bg: #f4f6f5;
+    --loom-surface: #ffffff;
+    --loom-surface-2: #eef3f2; /* side panel */
+    --loom-surface-3: #e1eaea; /* board surface */
+    --loom-text: #1f2933;
+    --loom-text-muted: #5b6770;
+    --loom-accent: #2f6f66;
+    --loom-accent-soft: #c9dad6;
+    --loom-outline: #c7d6d3;
+    --loom-outline-variant: #e2ecea;
+    --loom-focus: rgba(47, 111, 102, 0.35);
+  }
+
+  html,
+  body {
+    background: var(--loom-bg);
+    color: var(--loom-text);
+  }
+}
+
+@layer components {
+  .loom-card {
+    border: 1px solid var(--loom-outline);
+    background: var(--loom-surface);
+    border-radius: 16px;
+  }
+
+  .loom-chip {
+    border: 1px solid var(--loom-outline);
+    background: var(--loom-surface);
+    border-radius: 9999px;
+  }
+
+  .loom-input {
+    border: 1px solid var(--loom-outline);
+    background: var(--loom-surface);
+    border-radius: 14px;
+  }
+
+  .loom-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px var(--loom-focus);
+  }
+
+  .loom-button {
+    border-radius: 14px;
+  }
+
+  .loom-button-primary {
+    background: var(--loom-accent);
+    color: white;
+  }
+
+  .loom-button-primary:hover {
+    filter: brightness(0.96);
+  }
+
+  .loom-button-secondary {
+    background: var(--loom-surface);
+    border: 1px solid var(--loom-outline);
+    color: var(--loom-text);
+  }
+
+  .loom-button-secondary:hover {
+    background: rgba(201, 218, 214, 0.35);
+  }
+
+  .nav-link {
+    transition: all 0.2s ease-out;
+    transform-origin: center;
+  }
+
+  .nav-link:hover {
+    transform: scale(1.08);
+    background-color: var(--loom-accent-soft);
+    color: var(--loom-accent) !important;
+  }
+}
